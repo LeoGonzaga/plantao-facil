@@ -12,7 +12,8 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "coverage": "jest --coverage",
     "prepare": "husky install",
-    "cmt": "git-cz"
+    "cmt": "git-cz",
+    "plop": "plop"
   },
   "dependencies": {
     "react": "^19.1.0",
