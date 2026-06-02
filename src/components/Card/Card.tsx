@@ -1,27 +1,34 @@
 import Button from "../Button";
+import Infomation from "../Infomation";
 import Tag from "../Tag";
 
 import "./styles.scss";
+import { useCard } from "./useCard";
 
 export const Card = () => {
+  const { data, handleOpenWhatsapp, handleOpenGoogleMaps } = useCard();
+
+  if (!data) return null;
+
   return (
     <div className="card__container">
-      <Tag variant="success">Aberta em Plantão</Tag>
+      {data?.onCall && <Tag variant="success">Aberta em Plantão</Tag>}
 
-      <h2>Farmácia Santa Maria</h2>
+      <h2>{data?.name}</h2>
 
-      <p>Rua São Sebastião, 56 — Centro, Pedralva</p>
-      <p>(35) 3434-5566</p>
-      <p>Dra. Beatriz Souza</p>
+      <Infomation {...data} />
 
       <hr />
 
       <div className="buttons">
-        <Button color="#10b981">
+        <Button color="#10b981" onClick={() => handleOpenWhatsapp(data?.phone)}>
           <span className="material-symbols-outlined">phone</span>
           Whatsapp
         </Button>
-        <Button color="#000">
+        <Button
+          color="#000"
+          onClick={() => handleOpenGoogleMaps(data?.address)}
+        >
           <span className="material-symbols-outlined">location_on</span>
           Google Maps
         </Button>

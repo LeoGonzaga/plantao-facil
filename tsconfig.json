@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": ["DOM", "ES2015"],
+    "lib": ["DOM", "ES2017"],
     "types": ["@testing-library/jest-dom"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -11,7 +11,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@src/*": ["./src/*"]
+      "@src/*": ["./src/*"],
+      "@assets/*": ["./assets/*"]
     }
   }
 }

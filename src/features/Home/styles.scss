@@ -2,12 +2,19 @@
 
 .container__home {
   display: flex;
+
   justify-content: center;
+
   &__limit {
     width: 700px;
   }
 
   &__content {
     padding: 64px 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100dvh - 220px);
+
+    justify-content: space-between;
   }
 }
