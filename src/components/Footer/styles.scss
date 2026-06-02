@@ -1,0 +1,18 @@
+@import "../../shared/variables";
+
+.footer__container {
+  padding-top: 64px;
+  text-align: center;
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $border;
+    margin-bottom: 32px;
+  }
+
+  p {
+    padding-bottom: 14px;
+    font-size: 12px;
+    color: $muted;
+  }
+}

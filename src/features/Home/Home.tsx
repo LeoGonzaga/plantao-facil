@@ -4,6 +4,7 @@ import "./styles.scss";
 import Header from "@src/components/Header";
 import Banner from "@src/components/Banner";
 import Card from "@src/components/Card";
+import Footer from "@src/components/Footer";
 
 export const Home = (): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ export const Home = (): JSX.Element => {
         <div className="container__home__content">
           <Banner />
           <Card />
+          <Footer />
         </div>
       </div>
     </section>

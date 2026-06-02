@@ -17,8 +17,14 @@ export const Card = () => {
       <hr />
 
       <div className="buttons">
-        <Button color="#10b981">Whatsapp</Button>
-        <Button color="#000">Google Maps</Button>
+        <Button color="#10b981">
+          <span className="material-symbols-outlined">phone</span>
+          Whatsapp
+        </Button>
+        <Button color="#000">
+          <span className="material-symbols-outlined">location_on</span>
+          Google Maps
+        </Button>
       </div>
     </div>
   );
