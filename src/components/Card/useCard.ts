@@ -5,7 +5,7 @@ export const useCard = () => {
   const { onCall } = useGoogleSheets();
 
   const handleOpenWhatsapp = (phone?: string) => {
-    window.open(`${WHATSAPP_URL}=${phone}&${WHATSAPP_TEXT}`, "_blank");
+    window.open(`${WHATSAPP_URL}=55${phone}&${WHATSAPP_TEXT}`, "_blank");
   };
 
   const handleOpenGoogleMaps = (address = "") => {
