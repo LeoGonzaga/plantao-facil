@@ -16,7 +16,7 @@ export default function (plop) {
       },
       {
         type: "add",
-        path: "src/components/{{pascalCase name}}/index.tsx",
+        path: "src/components/{{pascalCase name}}/index.ts",
         templateFile: "templates/index.hbs",
       },
       {
