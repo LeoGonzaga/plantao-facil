@@ -12,8 +12,10 @@ export const Home = (): JSX.Element => {
       <div className="container__home__limit">
         <Header />
         <div className="container__home__content">
-          <Banner />
-          <Card />
+          <div>
+            <Banner />
+            <Card />
+          </div>
           <Footer />
         </div>
       </div>
