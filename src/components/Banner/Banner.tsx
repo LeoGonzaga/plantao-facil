@@ -2,9 +2,10 @@ import { useGoogleSheets } from "@src/hooks";
 import "./styles.scss";
 
 import empty from "@assets/empty.svg";
+import Loader from "../Loader";
 
 export const Banner = () => {
-  const { hasOnCall } = useGoogleSheets();
+  const { hasOnCall, isLoading } = useGoogleSheets();
   return (
     <div className="banner__container">
       <h1>
@@ -15,20 +16,24 @@ export const Banner = () => {
         localização.
       </span>
 
-      {hasOnCall && (
+      {isLoading && <Loader />}
+
+      {hasOnCall && !isLoading && (
         <h3>
           <span></span>
           Plantão agora
         </h3>
       )}
 
-      <div className="banner__container__empty">
-        <img src={empty} alt="Nenhum plantão" width={200} />
+      {!hasOnCall && !isLoading && (
+        <div className="banner__container__empty">
+          <img src={empty} alt="Nenhum plantão" width={200} />
 
-        <h2>Nenhum plantão encontrado</h2>
+          <h2>Nenhum plantão encontrado</h2>
 
-        <span>Não há farmácias de plantão cadastradas para hoje.</span>
-      </div>
+          <span>Não há farmácias de plantão cadastradas para hoje.</span>
+        </div>
+      )}
     </div>
   );
 };

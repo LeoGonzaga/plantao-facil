@@ -1,0 +1,49 @@
+.container__loader {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+
+  .skeleton {
+    display: inline-block;
+    background: #e2e8f0;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+      animation: loading 1.5s infinite;
+    }
+  }
+
+  @keyframes loading {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .skeleton-text {
+    height: 160px;
+    margin: 6px 0;
+    width: 100%;
+
+    &--short {
+      width: 40%;
+    }
+
+    &--medium {
+      width: 90%;
+    }
+
+    &--full {
+      width: 100%;
+    }
+  }
+}
