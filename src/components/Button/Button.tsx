@@ -1,6 +1,19 @@
-import { JSX } from "react";
 import { ButtonProps } from "./types";
 
-export const Button = ({ children, ...props }: ButtonProps): JSX.Element => {
-  return <button {...props}>{children}</button>;
+import "./styles.scss";
+import { CSSProperties } from "react";
+
+export const Button = ({ children, color, ...props }: ButtonProps) => {
+  const colorText = color === "#fff" ? "#000" : "#fff";
+
+  const style = {
+    "--button-color": color,
+    color: colorText,
+  } as CSSProperties;
+
+  return (
+    <button className="button__container" {...props} style={style}>
+      {children}
+    </button>
+  );
 };
