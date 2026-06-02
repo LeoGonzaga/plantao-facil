@@ -1,10 +1,20 @@
 import { JSX } from "react";
 import "./styles.scss";
 
+import Header from "@src/components/Header";
+import Banner from "@src/components/Banner";
+import Card from "@src/components/Card";
+
 export const Home = (): JSX.Element => {
   return (
     <section className="container__home">
-      <h1>Hello!</h1>
+      <div className="container__home__limit">
+        <Header />
+        <div className="container__home__content">
+          <Banner />
+          <Card />
+        </div>
+      </div>
     </section>
   );
 };

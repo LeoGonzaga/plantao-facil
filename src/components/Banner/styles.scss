@@ -1,0 +1,31 @@
+@import "../../shared/variables";
+
+.banner__container {
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 16px;
+    font-size: clamp(38px, 41px, 41px);
+
+    span {
+      font-size: clamp(38px, 41px, 41px);
+      font-weight: 600;
+      padding-bottom: 16px;
+      color: $primary-color;
+    }
+  }
+
+  h3 {
+    padding-top: 36px;
+    padding-bottom: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    color: $muted;
+  }
+
+  span {
+    font-size: 14px;
+    color: $muted;
+  }
+}

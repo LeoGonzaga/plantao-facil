@@ -1,7 +1,19 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+@import "../../shared/variables";
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+.button__container {
+  color: #fff;
+  border: none;
+  border-radius: 38px;
+  padding: 0px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 48px;
+  min-width: 125px;
+  background-color: var(--button-color);
+  border: 1px solid $border;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
 }

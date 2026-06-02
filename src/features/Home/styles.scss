@@ -1,14 +1,13 @@
 @import "../../shared/variables";
 
 .container__home {
-  height: 100dvh;
-  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  &__limit {
+    width: 700px;
+  }
 
-  display: grid;
-  place-items: center;
-
-  h1 {
-    color: #fff;
-    font-size: 30px;
+  &__content {
+    padding: 64px 20px;
   }
 }

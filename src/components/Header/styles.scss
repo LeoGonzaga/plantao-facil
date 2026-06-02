@@ -1,0 +1,21 @@
+@import "../../shared/variables";
+
+.header__container {
+  border-bottom: 1px solid #e2e8f0;
+  color: $muted;
+  font-size: 15px;
+  max-width: 700px;
+  padding: 15px 30px;
+  > div {
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    span {
+      font-weight: 500;
+      font-size: clamp(12px, 1.5vw, 14px);
+    }
+  }
+}

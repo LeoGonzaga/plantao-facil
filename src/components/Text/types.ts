@@ -1,3 +1,5 @@
-export interface TextProps {
-  // Define your component's props here
+import React, { HTMLAttributes } from "react";
+
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
+  children: React.ReactNode;
 }

@@ -1,0 +1,32 @@
+@import "../../shared/variables";
+
+.card__container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 36px;
+  border-radius: 26px;
+
+  h2 {
+    padding-top: 20px;
+    font-size: 30px;
+    padding-bottom: 24px;
+    font-weight: 500;
+  }
+
+  p {
+    padding-bottom: 14px;
+    font-size: 14px;
+    color: $muted;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: $border;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 12px;
+    padding-top: 16px;
+  }
+}
